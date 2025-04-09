@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<!-- Declaração do tipo de documento - indica que estamos usando HTML5 -->
+
+<html lang="pt-BR">
+<!-- Tag raiz do documento HTML - define o idioma principal como português do Brasil -->
+
+<head>
+<!-- Seção de cabeçalho - contém metadados e configurações não visíveis -->
+
+    <!-- Meta tag para definição do conjunto de caracteres -->
+    <meta charset="UTF-8">
+    <!-- charset=UTF-8 permite uso de acentos, caracteres especiais e emojis -->
+    
+    <!-- Meta tag para configuração de viewport em dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- width=device-width: ajusta a largura ao dispositivo -->
+    <!-- initial-scale=1.0: define zoom inicial de 100% -->
+
+    <!-- Título da página que aparece na aba do navegador -->
+    <title>Guia Completo de HTML e CSS</title>
+    
+    <!-- Link para arquivo CSS externo -->
+    <link rel="stylesheet" href="estilos.css">
+    <!-- rel="stylesheet" indica que é uma folha de estilo -->
+    <!-- href aponta para o arquivo CSS externo -->
+    
+    <!-- Estilos CSS internos (usado apenas para fins didáticos) -->
+    <style>
+        /* Estilização do corpo da página */
+        body {
+            font-family: Arial, sans-serif; /* Define fonte padrão */
+            line-height: 1.6; /* Espaçamento entre linhas */
+            color: #333; /* Cor do texto principal */
+            max-width: 1200px; /* Largura máxima do conteúdo */
+            margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
+            padding: 20px; /* Espaçamento interno */
+        }
+        
+        /* Estilo para cabeçalhos h1, h2 e h3 */
+        h1, h2, h3 {
+            color: #2c3e50; /* Cor azul escuro para títulos */
+        }
+        
+        /* Estilo para blocos de código */
+        code {
+            background-color: #f4f4f4; /* Fundo cinza claro */
+            padding: 2px 5px; /* Espaçamento interno */
+            border-radius: 3px; /* Bordas arredondadas */
+            font-family: monospace; /* Fonte de código */
+        }
+    </style>
+</head>
+
+<body>
+<!-- Corpo do documento - todo conteúdo visível fica aqui -->
+
+    <!-- Cabeçalho visual da página -->
+    <header>
+        <!-- Título principal da página (deve ser único) -->
+        <h1>Bem vindo ao meu site de estudos.</h1>
+        
+        <!-- Subtítulo da página -->
+        <h2>Aprendendo HTML na Prática</h2>
+        
+        <!-- Parágrafo introdutório -->
+        <p>Do básico ao avançado - Aprenda a criar páginas web</p>
+        
+        <!-- Parágrafo com texto em destaque -->
+        <p>Esta é uma página criada para praticar os conceitos básicos de <strong>HTML</strong>,aprendidos na aula do Prof.Me. Ronan Anacleto.</p>
+        <!-- <strong> dá ênfase semântica ao texto -->
+    </header>
+    
+    <!-- Menu de navegação principal -->
+    <nav>
+        <!-- Lista não ordenada para os itens de menu -->
+        <ul>
+            <!-- Cada item é um link para seção da página -->
+            <li><a href="#html-basico">HTML Básico</a></li>
+            <li><a href="#tags-essenciais">Tags Essenciais</a></li>
+            <li><a href="#css-basico">CSS Básico</a></li>
+            <li><a href="#layouts">Layouts com Flexbox</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Exibição de imagem -->
+    <img src="nomedaimagem.png" alt="Imagem de exemplo" width="300">
+    <!-- 
+        src = caminho/local da imagem 
+        alt = texto alternativo (acessibilidade)
+        width = largura em pixels 
+    -->
+    
+    <!-- Linha horizontal divisória -->
+    <hr>
+    <!-- Cria uma linha para separar seções visualmente -->
+    
+    <!-- Conteúdo principal da página -->
+    <main>
+        <!-- Seção sobre HTML básico -->
+        <section id="html-basico">
+            <!-- id permite criar links internos para esta seção -->
+            <h2>HTML Básico</h2>
+            
+            <!-- Artigo com conteúdo independente -->
+            <article>
+                <h3>O que é HTML?</h3>
+                <p>HTML (HyperText Markup Language) é a linguagem de marcação padrão para criar páginas web. Não é uma linguagem de programação, mas sim de marcação, que define a estrutura e o conteúdo de uma página.</p>
+                
+                <h3>Estrutura Básica de um Documento HTML</h3>
+                <!-- Bloco de código formatado -->
+                <pre><code>
+&lt;!DOCTYPE html&gt;  <!-- Declaração do tipo de documento -->
+&lt;html lang="pt-BR"&gt;  <!-- Elemento raiz com idioma -->
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;  <!-- Definição de caracteres -->
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Título da Página&lt;/title&gt;  <!-- Título na aba -->
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Conteúdo visível --&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                </code></pre>
+                
+                <h3>Como Criar um Arquivo HTML</h3>
+                <!-- Lista ordenada (numerada) de passos -->
+                <ol>
+                    <li>Abra um editor de texto (VS Code, Sublime, Notepad++)</li>
+                    <li>Crie um novo arquivo</li>
+                    <li>Salve com a extensão <code>.html</code> (ex: <code>index.html</code>)</li>
+                    <li>Abra no navegador para visualizar</li>
+                </ol>
+            </article>
+        </section>
+        
+        <!-- Seção sobre tags HTML essenciais -->
+        <section id="tags-essenciais">
+            <h2>Tags HTML Essenciais</h2>
+            
+            <article>
+                <h3>Cabeçalhos</h3>
+                <p>Os cabeçalhos vão de <code>&lt;h1&gt;</code> (mais importante) até <code>&lt;h6&gt;</code> (menos importante):</p>
+                <!-- Exemplo de código de cabeçalhos -->
+                <pre><code>
+&lt;h1&gt;Título Principal&lt;/h1&gt;
+&lt;h2&gt;Subtítulo&lt;/h2&gt;
+&lt;h3&gt;Seção&lt;/h3&gt;
+                </code></pre>
+                
+                <h3>Parágrafos e Formatação de Texto</h3>
+                <!-- Exemplo de formatação de texto -->
+                <pre><code>
+&lt;p&gt;Este é um parágrafo.&lt;/p&gt;
+&lt;p&gt;Texto em &lt;strong&gt;negrito&lt;/strong&gt; e &lt;em&gt;itálico&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Texto &lt;u&gt;sublinhado&lt;/u&gt; e &lt;mark&gt;destacado&lt;/mark&gt;.&lt;/p&gt;
+                </code></pre>
+                
+                <h3>Links e Âncoras</h3>
+                <!-- Exemplos de links -->
+                <pre><code>
+&lt;a href="https://exemplo.com"&gt;Link para Exemplo.com&lt;/a&gt;
+&lt;a href="#secao"&gt;Link para seção nesta página&lt;/a&gt;
+&lt;a href="mailto:email@exemplo.com"&gt;Enviar email&lt;/a&gt;
+                </code></pre>
+                
+                <h3>Imagens</h3>
+                <!-- Exemplo de tag img com atributos -->
+                <pre><code>
+&lt;img src="imagem.jpg" alt="Descrição da imagem" width="300" height="200"&gt;
+
+                </code></pre>
+                <p>O atributo <code>alt</code> é importante para acessibilidade e SEO.</p>
+                
+                <h3>Listas</h3>
+                <!-- Container flexível para mostrar dois tipos de listas lado a lado -->
+                <div class="flex-container">
+                    <div>
+                        <h4>Lista Ordenada (numerada)</h4>
+                        <pre><code>
+&lt;ol&gt;
+    &lt;li&gt;Primeiro item&lt;/li&gt;
+    &lt;li&gt;Segundo item&lt;/li&gt;
+    &lt;li&gt;Terceiro item&lt;/li&gt;
+&lt;/ol&gt;
+                        </code></pre>
+                    </div>
+                    <div>
+                        <h4>Lista Não Ordenada (com marcadores)</h4>
+                        <pre><code>
+&lt;ul&gt;
+    &lt;li&gt;Item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+    &lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ul&gt;
+                        </code></pre>
+                    </div>
+                </div>
+                
+                <h3>Tabelas</h3>
+                <!-- Exemplo de estrutura de tabela -->
+                <pre><code>
+&lt;table&gt;
+    &lt;thead&gt;  <!-- Cabeçalho da tabela -->
+        &lt;tr&gt;  <!-- Linha da tabela -->
+            &lt;th&gt;Cabeçalho 1&lt;/th&gt;  <!-- Célula de cabeçalho -->
+            &lt;th&gt;Cabeçalho 2&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;  <!-- Corpo da tabela -->
+        &lt;tr&gt;
+            &lt;td&gt;Dado 1&lt;/td&gt;  <!-- Célula de dados -->
+            &lt;td&gt;Dado 2&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+                </code></pre>
+            </article>
+        </section>
+        
+        <!-- Seção sobre CSS básico -->
+        <section id="css-basico">
+            <h2>CSS Básico</h2>
+            
+            <article>
+                <h3>O que é CSS?</h3>
+                <p>CSS (Cascading Style Sheets) é uma linguagem de estilo usada para descrever a apresentação de um documento HTML. Enquanto o HTML estrutura o conteúdo, o CSS estiliza esse conteúdo.</p>
+                
+                <h3>Como Conectar CSS ao HTML</h3>
+                <p>Existem três formas de adicionar CSS:</p>
+                <!-- Lista de métodos para incluir CSS -->
+                <ol>
+                    <li><strong>Inline:</strong> Direto na tag HTML (não recomendado)</li>
+                    <li><strong>Interno:</strong> Dentro da tag <code>&lt;style&gt;</code> no <code>&lt;head&gt;</code></li>
+                    <li><strong>Externo:</strong> Em um arquivo separado (recomendado)</li>
+                </ol>
+                
+                <h4>Exemplo de CSS Externo</h4>
+                <p>Crie um arquivo chamado <code>estilos.css</code> e adicione no HTML:</p>
+                <pre><code>
+&lt;head&gt;
+    &lt;link rel="stylesheet" href="estilos.css"&gt;
+&lt;/head&gt;
+                </code></pre>
+                
+                <h3>Sintaxe Básica do CSS</h3>
+                <!-- Exemplo da estrutura CSS -->
+                <pre><code>
+seletor {
+    propriedade: valor;
+    outra-propriedade: valor;
+}
+                </code></pre>
+                
+                <h3>Seletores Básicos</h3>
+                <!-- Lista de tipos de seletores -->
+                <ul>
+                    <li><strong>Seletor de elemento:</strong> <code>p { color: blue; }</code></li>
+                    <li><strong>Seletor de classe:</strong> <code>.destaque { background: yellow; }</code></li>
+                    <li><strong>Seletor de ID:</strong> <code>#cabecalho { font-size: 24px; }</code></li>
+                </ul>
+                
+                <h3>Box Model</h3>
+                <p>Todos os elementos HTML são caixas com:</p>
+                <!-- Lista dos componentes do box model -->
+                <ul>
+                    <li><strong>Conteúdo (content):</strong> O conteúdo real do elemento</li>
+                    <li><strong>Preenchimento (padding):</strong> Espaço entre o conteúdo e a borda</li>
+                    <li><strong>Borda (border):</strong> A borda ao redor do padding</li>
+                    <li><strong>Margem (margin):</strong> Espaço fora da borda</li>
+                </ul>
+                
+                <!-- Demonstração visual do box model -->
+                <div class="box-model-example">
+                    <div class="margin">
+                        <div class="border">
+                            <div class="padding">
+                                <div class="content">
+                                    Conteúdo
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3>Exemplo de Propriedades CSS</h3>
+                <!-- Exemplos de regras CSS -->
+                <pre><code>
+body {
+    background-color: #f4f4f4; /* Cor de fundo */
+    font-family: Arial, sans-serif; /* Fonte padrão */
+    margin: 0; /* Remove margens padrão */
+    padding: 20px; /* Espaçamento interno */
+}
+
+h1 {
+    color: #2c3e50; /* Cor do texto */
+    text-align: center; /* Alinhamento central */
+    border-bottom: 2px solid #3498db; /* Borda inferior */
+    padding-bottom: 10px; /* Espaçamento abaixo do texto */
+}
+
+.destaque {
+    background-color: #ffffcc; /* Cor de fundo amarelo claro */
+    padding: 10px; /* Espaçamento interno */
+    border-left: 4px solid #f1c40f; /* Borda lateral esquerda */
+}
+                </code></pre>
+            </article>
+        </section>
+        
+        <!-- Seção sobre Flexbox -->
+        <section id="layouts">
+            <h2>Layouts com Flexbox</h2>
+            
+            <article>
+                <h3>O que é Flexbox?</h3>
+                <p>Flexbox é um modelo de layout CSS que permite organizar itens em um container de forma dinâmica, independentemente de seu tamanho. É especialmente útil para criar layouts responsivos.</p>
+                
+                <h3>Principais Propriedades do Flexbox</h3>
+                
+                <h4>Para o container (parent):</h4>
+                <!-- Lista de propriedades para o container flex -->
+                <ul>
+                    <li><code>display: flex;</code> - Ativa o flexbox</li>
+                    <li><code>flex-direction</code> - Define a direção dos itens (row, column, row-reverse, column-reverse)</li>
+                    <li><code>justify-content</code> - Alinhamento horizontal (flex-start, center, flex-end, space-between, space-around)</li>
+                    <li><code>align-items</code> - Alinhamento vertical (flex-start, center, flex-end, stretch)</li>
+                    <li><code>flex-wrap</code> - Permite que os itens quebrem para a próxima linha</li>
+                </ul>
+                
+                <h4>Para os itens (children):</h4>
+                <!-- Lista de propriedades para os itens flex -->
+                <ul>
+                    <li><code>order</code> - Controla a ordem dos itens</li>
+                    <li><code>flex-grow</code> - Define como o item cresce em relação aos outros</li>
+                    <li><code>flex-shrink</code> - Define como o item encolhe em relação aos outros</li>
+                    <li><code>align-self</code> - Alinhamento individual para um item</li>
+                </ul>
+                
+                <!-- Exemplo prático de Flexbox -->
+                <h3>Exemplo Prático de Flexbox</h3>
+                <div class="flex-example-container">
+                    <div class="flex-example-item">Item 1</div>
+                    <div class="flex-example-item">Item 2</div>
+                    <div class="flex-example-item">Item 3</div>
+                </div>
+                
+                <h4>HTML do Exemplo:</h4>
+                <pre><code>
+&lt;div class="container"&gt;
+    &lt;div class="item"&gt;Item 1&lt;/div&gt;
+    &lt;div class="item"&gt;Item 2&lt;/div&gt;
+    &lt;div class="item"&gt;Item 3&lt;/div&gt;
+&lt;/div&gt;
+                </code></pre>
+                
+                <h4>CSS do Exemplo:</h4>
+                <pre><code>
+.container {
+    display: flex; /* Ativa o modelo flexbox */
+    flex-direction: row; /* Disposição em linha */
+    justify-content: space-between; /* Distribui espaço entre itens */
+    align-items: center; /* Centraliza verticalmente */
+    border: 1px solid #ccc; /* Borda cinza */
+    padding: 10px; /* Espaçamento interno */
+}
+
+.item {
+    background-color: #3498db; /* Cor de fundo azul */
+    color: white; /* Texto branco */
+    padding: 20px; /* Espaçamento interno */
+    margin: 5px; /* Margem externa */
+}
+                </code></pre>
+                
+                <!-- Exercício de criação de portfólio -->
+                <h3>Exercício: Criando um Portfólio</h3>
+                <p>Vamos criar uma estrutura básica para um portfólio usando HTML e CSS com Flexbox:</p>
+                
+                <h4>Estrutura HTML:</h4>
+                <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Meu Portfólio&lt;/title&gt;
+    &lt;link rel="stylesheet" href="portfolio.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header class="cabecalho"&gt;
+        &lt;h1&gt;Meu Portfólio&lt;/h1&gt;
+        &lt;nav&gt;
+            &lt;ul class="menu"&gt;
+                &lt;li&gt;&lt;a href="#sobre"&gt;Sobre&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#projetos"&gt;Projetos&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#contato"&gt;Contato&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+    
+    &lt;main&gt;
+        &lt;section id="sobre" class="secao"&gt;
+            &lt;h2&gt;Sobre Mim&lt;/h2&gt;
+            &lt;p&gt;Texto sobre você...&lt;/p&gt;
+        &lt;/section&gt;
+        
+        &lt;section id="projetos" class="secao"&gt;
+            &lt;h2&gt;Meus Projetos&lt;/h2&gt;
+            &lt;div class="projetos-container"&gt;
+                &lt;div class="projeto"&gt;
+                    &lt;h3&gt;Projeto 1&lt;/h3&gt;
+                    &lt;p&gt;Descrição do projeto...&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class="projeto"&gt;
+                    &lt;h3&gt;Projeto 2&lt;/h3&gt;
+                    &lt;p&gt;Descrição do projeto...&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+    &lt;/main&gt;
+    
+    &lt;footer id="contato" class="rodape"&gt;
+        &lt;p&gt;Entre em contato: email@exemplo.com&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                </code></pre>
+                
+                <h4>CSS (portfolio.css):</h4>
+                <pre><code>
+/* Estilos gerais para o corpo da página */
+body {
+    font-family: Arial, sans-serif; /* Define a fonte padrão */
+    line-height: 1.6; /* Espaçamento entre linhas */
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove paddings padrão */
+    color: #333; /* Cor do texto principal */
+}
+
+/* Estilização do cabeçalho */
+.cabecalho {
+    background-color: #2c3e50; /* Cor de fundo azul escuro */
+    color: white; /* Cor do texto */
+    padding: 1rem; /* Espaçamento interno */
+    display: flex; /* Ativa flexbox */
+    justify-content: space-between; /* Alinha itens nas extremidades */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+/* Estilização do menu de navegação */
+.menu {
+    display: flex; /* Layout flexível */
+    list-style: none; /* Remove marcadores de lista */
+    gap: 1rem; /* Espaço entre itens */
+}
+
+/* Estilização dos links do menu */
+.menu a {
+    color: white; /* Cor do texto */
+    text-decoration: none; /* Remove sublinhado */
+}
+
+/* Estilização das seções */
+.secao {
+    padding: 2rem; /* Espaçamento interno */
+    max-width: 1200px; /* Largura máxima */
+    margin: 0 auto; /* Centraliza na página */
+}
+
+/* Container para os projetos */
+.projetos-container {
+    display: flex; /* Ativa flexbox */
+    flex-wrap: wrap; /* Permite quebra de linha */
+    gap: 1rem; /* Espaço entre itens */
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+/* Estilização individual dos projetos */
+.projeto {
+    background-color: #f4f4f4; /* Cor de fundo cinza claro */
+    padding: 1rem; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    flex: 1 1 300px; /* Cresce e encolhe com base de 300px */
+    max-width: 400px; /* Largura máxima */
+}
+
+/* Estilização do rodapé */
+.rodape {
+    background-color: #2c3e50; /* Cor de fundo azul escuro */
+    color: white; /* Cor do texto */
+    text-align: center; /* Alinhamento central */
+    padding: 1rem; /* Espaçamento interno */
+    margin-top: 2rem; /* Margem superior */
+}
+                </code></pre>
+            </article>
+        </section>
+    </main>
+
+    <!-- Tabela simples com informações -->
+    <h3>Informações Importantes</h3>
+    <table border="1">
+        <!-- border="1" adiciona borda (em produção usar CSS) -->
+        <tr>
+            <!-- Linha da tabela -->
+            <th>Item</th> <!-- Célula de cabeçalho -->
+            <th>Descrição</th>
+        </tr>
+        <tr>
+            <td>HTML</td> <!-- Célula normal -->
+            <td>Linguagem de marcação para estruturar páginas web</td>
+        </tr>
+        <tr>
+            <td>CSS</td>
+            <td>Linguagem para estilizar páginas web</td>
+        </tr>
+    </table>
+
+    <!-- Exemplos de formatação de texto -->
+    <h3>Exemplos de Formatação:</h3>
+    <p>
+        <em>Texto em itálico</em>, <!-- Ênfase semântica -->
+        <u>Texto sublinhado</u>, <!-- Sublinhado visual -->
+        <mark>Texto marcado</mark> <!-- Destaque como marca-texto -->
+    </p>
+
+    <!-- Seção de redes sociais -->
+    <div class="redes-sociais">
+        <h4>Se precisar de ajuda conecte-se comigo:</h4>
+        <!-- Link para Instagram -->
+        <a href="https://www.instagram.com/bru_anacleto_/" target="_blank" class="botao-social">Instagram</a>
+        <!-- target="_blank" abre em nova aba -->
+        
+        <!-- Link para Facebook -->
+        <a href="https://facebook.com" target="_blank" class="botao-social">Facebook</a>
+        
+        <!-- Link para WhatsApp com mensagem pré-definida -->
+        <a href="https://api.whatsapp.com/send?phone=5543999799500&text=Oi%20D.%20Bruna%2C%20vim%20pela%20p%C3%A1gina%20web" target="_blank" class="botao-social">WhatsApp</a>
+    </div>
+    
+    <!-- Rodapé da página -->
+    <footer>
+        <p>© 2025 Guia de HTML e CSS. Baseado no material do Prof. Me. Ronan Anacleto Lopes.</p>
+        <p>Instituto Federal do Paraná - Campus Ivaiporã</p>
+    </footer>
+</body>
+</html>

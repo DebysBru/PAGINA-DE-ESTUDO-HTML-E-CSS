@@ -1,0 +1,183 @@
+/* ========== ESTILOS GERAIS ========== */
+
+/* Estilos aplicados ao elemento body (corpo da página) */
+body {
+    font-family: Arial, sans-serif; /* Define a fonte padrão como Arial ou sans-serif */
+    line-height: 1.6; /* Espaçamento entre linhas de 1.6 vezes o tamanho da fonte */
+    color: #333; /* Cor do texto principal (cinza escuro) */
+    max-width: 1200px; /* Largura máxima do conteúdo */
+    margin: 0 auto; /* Centraliza o conteúdo na página (margem automática nos lados) */
+    padding: 20px; /* Espaçamento interno de 20px */
+    background-color: #f9f9f9; /* Cor de fundo da página (cinza muito claro) */
+}
+
+/* ========== CABEÇALHOS ========== */
+
+/* Estilos para todos os cabeçalhos (h1 a h4) */
+h1, h2, h3, h4 {
+    color: #2c3e50; /* Cor azul escuro para títulos */
+}
+
+/* Estilos específicos para h1 */
+h1 {
+    text-align: center; /* Alinha o texto ao centro */
+    border-bottom: 2px solid #3498db; /* Adiciona borda inferior azul */
+    padding-bottom: 10px; /* Espaçamento abaixo do texto para a borda */
+}
+
+/* ========== LINKS ========== */
+
+/* Estilo padrão para links */
+a {
+    color: #3498db; /* Cor azul para links */
+    text-decoration: none; /* Remove o sublinhado padrão */
+}
+
+/* Estilo quando o mouse passa sobre o link */
+a:hover {
+    text-decoration: underline; /* Adiciona sublinhado no hover */
+}
+
+/* ========== NAVEGAÇÃO ========== */
+
+/* Estilo para a lista não ordenada dentro de nav */
+nav ul {
+    list-style: none; /* Remove os marcadores de lista */
+    padding: 0; /* Remove o padding padrão */
+    display: flex; /* Transforma a lista em um container flex */
+    gap: 15px; /* Espaço de 15px entre os itens */
+}
+
+/* ========== SEÇÕES ========== */
+
+/* Estilo para elementos section */
+section {
+    margin-bottom: 30px; /* Margem inferior de 30px */
+    background-color: white; /* Fundo branco */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra sutil */
+}
+
+/* ========== CÓDIGO ========== */
+
+/* Estilo para blocos de código pré-formatados */
+pre {
+    background-color: #f4f4f4; /* Fundo cinza claro */
+    padding: 15px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    overflow-x: auto; /* Adiciona scroll horizontal se necessário */
+}
+
+/* Estilo para elementos de código inline */
+code {
+    font-family: 'Courier New', Courier, monospace; /* Fonte monoespaçada */
+}
+
+/* ========== BOX MODEL ========== */
+
+/* Container do exemplo de box model */
+.box-model-example {
+    margin: 20px 0; /* Margem superior e inferior */
+}
+
+/* Representa a margem no box model */
+.margin {
+    background-color: #f1c40f; /* Cor amarela */
+    padding: 10px; /* Espaçamento interno */
+}
+
+/* Representa a borda no box model */
+.border {
+    background-color: #e74c3c; /* Cor vermelha */
+    padding: 10px; /* Espaçamento interno */
+}
+
+/* Representa o padding no box model */
+.padding {
+    background-color: #3498db; /* Cor azul */
+    padding: 20px; /* Espaçamento interno */
+}
+
+/* Representa o conteúdo no box model */
+.content {
+    background-color: #2ecc71; /* Cor verde */
+    padding: 30px; /* Espaçamento interno */
+    text-align: center; /* Alinhamento centralizado */
+    color: white; /* Texto branco */
+}
+
+/* ========== FLEXBOX ========== */
+
+/* Container flexível para exemplos */
+.flex-container {
+    display: flex; /* Ativa o flexbox */
+    gap: 20px; /* Espaço entre itens */
+    margin: 20px 0; /* Margem superior e inferior */
+}
+
+/* Estilo para os filhos diretos do flex-container */
+.flex-container > div {
+    flex: 1; /* Faz os itens crescerem igualmente */
+    background-color: white; /* Fundo branco */
+    padding: 15px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra sutil */
+}
+
+/* Container para exemplos de flexbox */
+.flex-example-container {
+    display: flex; /* Ativa o flexbox */
+    justify-content: space-between; /* Distribui espaço entre itens */
+    align-items: center; /* Centraliza verticalmente */
+    border: 1px solid #ccc; /* Borda cinza */
+    padding: 10px; /* Espaçamento interno */
+    margin: 20px 0; /* Margem superior e inferior */
+    background-color: white; /* Fundo branco */
+}
+
+/* Itens dentro do flex-example-container */
+.flex-example-item {
+    background-color: #3498db; /* Fundo azul */
+    color: white; /* Texto branco */
+    padding: 20px; /* Espaçamento interno */
+    margin: 5px; /* Margem externa */
+    text-align: center; /* Alinhamento centralizado */
+}
+
+/* ========== RODAPÉ ========== */
+
+/* Estilo para o rodapé */
+footer {
+    text-align: center; /* Alinhamento centralizado */
+    margin-top: 30px; /* Margem superior */
+    padding: 20px; /* Espaçamento interno */
+    background-color: #2c3e50; /* Fundo azul escuro */
+    color: white; /* Texto branco */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+/* ========== REDES SOCIAIS ========== */
+
+/* Container para botões de redes sociais */
+.redes-sociais {
+    margin: 30px 0; /* Margem superior e inferior */
+    text-align: center; /* Alinhamento centralizado */
+}
+
+/* Estilo dos botões sociais */
+.botao-social {
+    display: inline-block; /* Permite definir padding e margem */
+    padding: 10px 15px; /* Espaçamento interno */
+    margin: 0 10px; /* Margem lateral */
+    background-color: #4CAF50; /* Cor de fundo verde */
+    color: white; /* Texto branco */
+    text-decoration: none; /* Remove sublinhado */
+    border-radius: 4px; /* Bordas arredondadas */
+    transition: background-color 0.3s; /* Transição suave de cor */
+}
+
+/* Efeito hover nos botões sociais */
+.botao-social:hover {
+    background-color: #45a049; /* Cor de fundo verde mais escura */
+}
